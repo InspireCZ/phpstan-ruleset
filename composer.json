@@ -1,0 +1,24 @@
+{
+    "type": "library",
+    "name": "inspirecz/phpstan-ruleset",
+    "description": "INSPIRE phpstan ruleset",
+    "license": "MIT",
+    "keywords": [
+        "phpstan",
+        "php",
+        "ruleset"
+    ],
+    "require": {
+        "phpstan/phpstan": "^0.12.10",
+        "phpstan/phpstan-nette": "^0.12",
+        "phpstan/phpstan-strict-rules": "^0.12.4",
+        "phpstan/phpstan-dibi": "^0.12"
+    },
+    "authors": [
+        {
+            "name": "INSPIRE CZ s.r.o.",
+            "email": "firma@inspire.cz",
+            "homepage": "https://www.inspire.cz/"
+        }
+    ]
+}
