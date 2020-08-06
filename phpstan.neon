@@ -3,7 +3,6 @@ includes:
     - ../../phpstan/phpstan-nette/extension.neon
     - ../../phpstan/phpstan-nette/rules.neon
     - ../../phpstan/phpstan-dibi/extension.neon
-    - phpstan-baseline.neon
 
 parameters:
     inferPrivatePropertyTypeFromConstructor: true
