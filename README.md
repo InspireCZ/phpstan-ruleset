@@ -1,3 +1,3 @@
-# Inspire phpstan ruleset
+# Inspire PHPStan ruleset
 
-Set of phpstan rules used by INSPIRE CZ PHP developers.
+Set of PHPStan rules used by INSPIRE CZ developers.
