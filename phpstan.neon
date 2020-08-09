@@ -1,5 +1,4 @@
 includes:
-    - ../../phpstan/phpstan/conf/bleedingEdge.neon
     - ../../phpstan/phpstan-nette/extension.neon
     - ../../phpstan/phpstan-nette/rules.neon
     - ../../phpstan/phpstan-dibi/extension.neon
