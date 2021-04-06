@@ -2,11 +2,19 @@ includes:
     - ../../phpstan/phpstan-nette/extension.neon
     - ../../phpstan/phpstan-nette/rules.neon
     - ../../phpstan/phpstan-dibi/extension.neon
+    - ../../pepakriz/phpstan-exception-rules/extension.neon
 
 parameters:
     inferPrivatePropertyTypeFromConstructor: true
     checkMissingIterableValueType: true
     checkGenericClassInNonGenericObjectType: false
+
+    exceptionRules:
+        reportUnusedCatchesOfUncheckedExceptions: false
+        reportUnusedCheckedThrowsInSubtypes: false
+        reportCheckedThrowsInGlobalScope: false
+        uncheckedExceptions:
+            - LogicException
 
 rules:
     - PHPStan\Rules\BooleansInConditions\BooleanInBooleanAndRule
