@@ -15,6 +15,9 @@
         "phpstan/phpstan-dibi": "^0.12",
         "pepakriz/phpstan-exception-rules": "^0.11.6"
     },
+    "conflict": {
+        "inspire/nw7": "*"
+    },
     "authors": [
         {
             "name": "INSPIRE CZ s.r.o.",
