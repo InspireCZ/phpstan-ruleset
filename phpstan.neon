@@ -15,7 +15,8 @@ parameters:
         reportCheckedThrowsInGlobalScope: false
         uncheckedExceptions:
             - LogicException
-
+            - Nette\Application\AbortException
+            - PHPUnit\Framework\Exception
 rules:
     - PHPStan\Rules\BooleansInConditions\BooleanInBooleanAndRule
     - PHPStan\Rules\BooleansInConditions\BooleanInBooleanNotRule
