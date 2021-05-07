@@ -18,6 +18,8 @@ parameters:
             - Nette\Application\AbortException
             - PHPUnit\Framework\Exception
             - Nette\Application\BadRequestException
+            - ReflectionException
+
 rules:
     - PHPStan\Rules\BooleansInConditions\BooleanInBooleanAndRule
     - PHPStan\Rules\BooleansInConditions\BooleanInBooleanNotRule
