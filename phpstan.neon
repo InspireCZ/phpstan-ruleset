@@ -19,6 +19,7 @@ parameters:
             - PHPUnit\Framework\Exception
             - Nette\Application\BadRequestException
             - ReflectionException
+            - Nette\Application\UI\InvalidLinkException
 
 rules:
     - PHPStan\Rules\BooleansInConditions\BooleanInBooleanAndRule
