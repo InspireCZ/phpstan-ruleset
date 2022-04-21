@@ -5,6 +5,6 @@ parameters:
     customRulesetUsed: false
     tmpDir: %currentWorkingDirectory%/app/tmp/phpstan
 
-    excludes_analyse:
+    excludePaths:
         - %currentWorkingDirectory%/app/tmp/*
 
