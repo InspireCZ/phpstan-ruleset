@@ -1,0 +1,10 @@
+includes:
+    - rules.neon
+
+parameters:
+    customRulesetUsed: false
+    tmpDir: %currentWorkingDirectory%/app/tmp/phpstan
+
+    excludes_analyse:
+        - %currentWorkingDirectory%/app/tmp/*
+
