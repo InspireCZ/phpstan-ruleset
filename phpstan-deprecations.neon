@@ -1,5 +1,5 @@
 includes:
-    - rules.neon
+    - %currentWorkingDirectory%/lib/composer/phpstan/phpstan-deprecation-rules/rules.neon
 
 parameters:
     customRulesetUsed: false
