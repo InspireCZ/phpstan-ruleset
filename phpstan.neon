@@ -9,6 +9,8 @@ parameters:
     checkGenericClassInNonGenericObjectType: false
 
 rules:
+    - Inspire\PHPStan\Rules\DisableUnaryNegationOperatorRule
+
     - PHPStan\Rules\BooleansInConditions\BooleanInBooleanAndRule
     - PHPStan\Rules\BooleansInConditions\BooleanInBooleanNotRule
     - PHPStan\Rules\BooleansInConditions\BooleanInBooleanOrRule

@@ -21,5 +21,13 @@
             "email": "firma@inspire.cz",
             "homepage": "https://www.inspire.cz/"
         }
-    ]
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Inspire\\PHPStan\\": "src/"
+        }
+    }
 }
