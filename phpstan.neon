@@ -28,12 +28,6 @@ rules:
     - PHPStan\Rules\Operators\OperandInArithmeticPostIncrementRule
     - PHPStan\Rules\Operators\OperandInArithmeticPreDecrementRule
     - PHPStan\Rules\Operators\OperandInArithmeticPreIncrementRule
-    - PHPStan\Rules\Operators\OperandsInArithmeticAdditionRule
-    - PHPStan\Rules\Operators\OperandsInArithmeticDivisionRule
-    - PHPStan\Rules\Operators\OperandsInArithmeticExponentiationRule
-    - PHPStan\Rules\Operators\OperandsInArithmeticModuloRule
-    - PHPStan\Rules\Operators\OperandsInArithmeticMultiplicationRule
-    - PHPStan\Rules\Operators\OperandsInArithmeticSubtractionRule
     - PHPStan\Rules\Properties\MissingPropertyTypehintRule
     - PHPStan\Rules\StrictCalls\DynamicCallOnStaticMethodsRule
     - PHPStan\Rules\StrictCalls\StrictFunctionCallsRule
@@ -59,3 +53,27 @@ services:
             universalObjectCratesClasses: %universalObjectCratesClasses%
         tags:
             - phpstan.rules.rule
+    -
+        class: PHPStan\Rules\Operators\OperandsInArithmeticAdditionRule
+        arguments:
+            bleedingEdge: %featureToggles.bleedingEdge%
+    -
+        class: PHPStan\Rules\Operators\OperandsInArithmeticDivisionRule
+        arguments:
+            bleedingEdge: %featureToggles.bleedingEdge%
+    -
+        class: PHPStan\Rules\Operators\OperandsInArithmeticExponentiationRule
+        arguments:
+            bleedingEdge: %featureToggles.bleedingEdge%
+    -
+        class: PHPStan\Rules\Operators\OperandsInArithmeticModuloRule
+        arguments:
+            bleedingEdge: %featureToggles.bleedingEdge%
+    -
+        class: PHPStan\Rules\Operators\OperandsInArithmeticMultiplicationRule
+        arguments:
+            bleedingEdge: %featureToggles.bleedingEdge%
+    -
+        class: PHPStan\Rules\Operators\OperandsInArithmeticSubtractionRule
+        arguments:
+            bleedingEdge: %featureToggles.bleedingEdge%
