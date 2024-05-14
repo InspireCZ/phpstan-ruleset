@@ -5,15 +5,17 @@ includes:
 
 parameters:
     inferPrivatePropertyTypeFromConstructor: true
-    checkMissingIterableValueType: true
-    checkGenericClassInNonGenericObjectType: false
+    ignoreErrors:
+        -
+            identifier:
+                missingType.iterableValue
+        -
+            identifier:
+                missingType.generics
 
 rules:
     - Inspire\PHPStan\Rules\DisableUnaryNegationOperatorRule
-
-    - PHPStan\Rules\BooleansInConditions\BooleanInBooleanAndRule
     - PHPStan\Rules\BooleansInConditions\BooleanInBooleanNotRule
-    - PHPStan\Rules\BooleansInConditions\BooleanInBooleanOrRule
     - PHPStan\Rules\BooleansInConditions\BooleanInElseIfConditionRule
     - PHPStan\Rules\BooleansInConditions\BooleanInIfConditionRule
     - PHPStan\Rules\BooleansInConditions\BooleanInTernaryOperatorRule
@@ -22,7 +24,6 @@ rules:
     - PHPStan\Rules\DisallowedConstructs\DisallowedImplicitArrayCreationRule
     - PHPStan\Rules\DisallowedConstructs\DisallowedShortTernaryRule
     - PHPStan\Rules\ForeachLoop\OverwriteVariablesWithForeachRule
-    - PHPStan\Rules\Functions\MissingFunctionParameterTypehintRule
     - PHPStan\Rules\Methods\WrongCaseOfInheritedMethodRule
     - PHPStan\Rules\Operators\OperandInArithmeticPostDecrementRule
     - PHPStan\Rules\Operators\OperandInArithmeticPostIncrementRule
@@ -38,42 +39,54 @@ rules:
 
 services:
     -
-        class: PHPStan\Rules\BooleansInConditions\BooleanRuleHelper
+        type: PHPStan\Rules\Functions\MissingFunctionParameterTypehintRule
+        arguments:
+            paramOut: false
     -
-        class: PHPStan\Rules\Cast\UselessCastRule
+        type: PHPStan\Rules\BooleansInConditions\BooleanRuleHelper
+    -
+        type: PHPStan\Rules\BooleansInConditions\BooleanInBooleanOrRule
+        arguments:
+            bleedingEdge: %featureToggles.bleedingEdge%
+    -
+        type: PHPStan\Rules\BooleansInConditions\BooleanInBooleanAndRule
+        arguments:
+            bleedingEdge: %featureToggles.bleedingEdge%
+    -
+        type: PHPStan\Rules\Cast\UselessCastRule
         arguments:
             treatPhpDocTypesAsCertain: %treatPhpDocTypesAsCertain%
         tags:
             - phpstan.rules.rule
     -
-        class: PHPStan\Rules\Operators\OperatorRuleHelper
+        type: PHPStan\Rules\Operators\OperatorRuleHelper
     -
-        class: PHPStan\Rules\VariableVariables\VariablePropertyFetchRule
+        type: PHPStan\Rules\VariableVariables\VariablePropertyFetchRule
         arguments:
             universalObjectCratesClasses: %universalObjectCratesClasses%
         tags:
             - phpstan.rules.rule
     -
-        class: PHPStan\Rules\Operators\OperandsInArithmeticAdditionRule
+        type: PHPStan\Rules\Operators\OperandsInArithmeticAdditionRule
         arguments:
             bleedingEdge: %featureToggles.bleedingEdge%
     -
-        class: PHPStan\Rules\Operators\OperandsInArithmeticDivisionRule
+        type: PHPStan\Rules\Operators\OperandsInArithmeticDivisionRule
         arguments:
             bleedingEdge: %featureToggles.bleedingEdge%
     -
-        class: PHPStan\Rules\Operators\OperandsInArithmeticExponentiationRule
+        type: PHPStan\Rules\Operators\OperandsInArithmeticExponentiationRule
         arguments:
             bleedingEdge: %featureToggles.bleedingEdge%
     -
-        class: PHPStan\Rules\Operators\OperandsInArithmeticModuloRule
+        type: PHPStan\Rules\Operators\OperandsInArithmeticModuloRule
         arguments:
             bleedingEdge: %featureToggles.bleedingEdge%
     -
-        class: PHPStan\Rules\Operators\OperandsInArithmeticMultiplicationRule
+        type: PHPStan\Rules\Operators\OperandsInArithmeticMultiplicationRule
         arguments:
             bleedingEdge: %featureToggles.bleedingEdge%
     -
-        class: PHPStan\Rules\Operators\OperandsInArithmeticSubtractionRule
+        type: PHPStan\Rules\Operators\OperandsInArithmeticSubtractionRule
         arguments:
             bleedingEdge: %featureToggles.bleedingEdge%

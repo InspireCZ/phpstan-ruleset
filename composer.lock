@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "23731bc44eda8cbbc93e16b772a1339d",
+    "content-hash": "cb98b7c4110bf40ac9c08b7f5a7331c1",
     "packages": [
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.2",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "a2ffec7db373d8da4973d1d62add872db5cd22dd"
+                "reference": "666cb1703742cea9cc80fee631f0940e1592fa6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/a2ffec7db373d8da4973d1d62add872db5cd22dd",
-                "reference": "a2ffec7db373d8da4973d1d62add872db5cd22dd",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/666cb1703742cea9cc80fee631f0940e1592fa6e",
+                "reference": "666cb1703742cea9cc80fee631f0940e1592fa6e",
                 "shasum": ""
             },
             "require": {
@@ -46,8 +46,11 @@
                 "static analysis"
             ],
             "support": {
+                "docs": "https://phpstan.org/user-guide/getting-started",
+                "forum": "https://github.com/phpstan/phpstan/discussions",
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.10.2"
+                "security": "https://github.com/phpstan/phpstan/security/policy",
+                "source": "https://github.com/phpstan/phpstan-src"
             },
             "funding": [
                 {
@@ -57,35 +60,30 @@
                 {
                     "url": "https://github.com/phpstan",
                     "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/phpstan/phpstan",
-                    "type": "tidelift"
                 }
             ],
-            "time": "2023-02-23T14:36:46+00:00"
+            "time": "2024-05-13T06:02:22+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
-            "version": "1.1.2",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-deprecation-rules.git",
-                "reference": "bcc1e8cdf81c3da1a2ba9188ee94cd7e2a62e865"
+                "reference": "fa8cce7720fa782899a0aa97b6a41225d1bb7b26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-deprecation-rules/zipball/bcc1e8cdf81c3da1a2ba9188ee94cd7e2a62e865",
-                "reference": "bcc1e8cdf81c3da1a2ba9188ee94cd7e2a62e865",
+                "url": "https://api.github.com/repos/phpstan/phpstan-deprecation-rules/zipball/fa8cce7720fa782899a0aa97b6a41225d1bb7b26",
+                "reference": "fa8cce7720fa782899a0aa97b6a41225d1bb7b26",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0",
-                "phpstan/phpstan": "^1.10"
+                "phpstan/phpstan": "^1.11"
             },
             "require-dev": {
                 "php-parallel-lint/php-parallel-lint": "^1.2",
-                "phpstan/phpstan-php-parser": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5"
             },
@@ -109,9 +107,9 @@
             "description": "PHPStan rules for detecting usage of deprecated classes, methods, properties, constants and traits.",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-deprecation-rules/issues",
-                "source": "https://github.com/phpstan/phpstan-deprecation-rules/tree/1.1.2"
+                "source": "https://github.com/phpstan/phpstan-deprecation-rules/tree/1.2.0"
             },
-            "time": "2023-01-17T16:14:21+00:00"
+            "time": "2024-04-20T06:39:48+00:00"
         },
         {
             "name": "phpstan/phpstan-dibi",
@@ -170,16 +168,16 @@
         },
         {
             "name": "phpstan/phpstan-nette",
-            "version": "1.2.4",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-nette.git",
-                "reference": "9e083bb5befde7b73f9a12fc5bd223a7dcd63920"
+                "reference": "8af94743efcc6d1e685f2ffd7ab279e39c96429c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-nette/zipball/9e083bb5befde7b73f9a12fc5bd223a7dcd63920",
-                "reference": "9e083bb5befde7b73f9a12fc5bd223a7dcd63920",
+                "url": "https://api.github.com/repos/phpstan/phpstan-nette/zipball/8af94743efcc6d1e685f2ffd7ab279e39c96429c",
+                "reference": "8af94743efcc6d1e685f2ffd7ab279e39c96429c",
                 "shasum": ""
             },
             "require": {
@@ -195,11 +193,11 @@
                 "nette/utils": "<2.3.0"
             },
             "require-dev": {
+                "nette/application": "^3.0",
                 "nette/forms": "^3.0",
                 "nette/utils": "^2.3.0 || ^3.0.0",
                 "nikic/php-parser": "^4.13.2",
                 "php-parallel-lint/php-parallel-lint": "^1.2",
-                "phpstan/phpstan-php-parser": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpstan/phpstan-strict-rules": "^1.0",
                 "phpunit/phpunit": "^9.5"
@@ -225,27 +223,27 @@
             "description": "Nette Framework class reflection extension for PHPStan",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-nette/issues",
-                "source": "https://github.com/phpstan/phpstan-nette/tree/1.2.4"
+                "source": "https://github.com/phpstan/phpstan-nette/tree/1.3.0"
             },
-            "time": "2023-02-18T13:39:23+00:00"
+            "time": "2024-04-20T06:40:32+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-strict-rules.git",
-                "reference": "b7dd96a5503919a43b3cd06a2dced9d4252492f2"
+                "reference": "363f921dd8441777d4fc137deb99beb486c77df1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/b7dd96a5503919a43b3cd06a2dced9d4252492f2",
-                "reference": "b7dd96a5503919a43b3cd06a2dced9d4252492f2",
+                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/363f921dd8441777d4fc137deb99beb486c77df1",
+                "reference": "363f921dd8441777d4fc137deb99beb486c77df1",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0",
-                "phpstan/phpstan": "^1.10"
+                "phpstan/phpstan": "^1.11"
             },
             "require-dev": {
                 "nikic/php-parser": "^4.13.0",
@@ -274,9 +272,9 @@
             "description": "Extra strict and opinionated rules for PHPStan",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-strict-rules/issues",
-                "source": "https://github.com/phpstan/phpstan-strict-rules/tree/1.5.0"
+                "source": "https://github.com/phpstan/phpstan-strict-rules/tree/1.6.0"
             },
-            "time": "2023-02-21T10:17:10+00:00"
+            "time": "2024-04-20T06:37:51+00:00"
         }
     ],
     "packages-dev": [],
@@ -287,5 +285,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

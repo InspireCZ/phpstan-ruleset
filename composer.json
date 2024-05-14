@@ -9,7 +9,7 @@
         "ruleset"
     ],
     "require": {
-        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan": "^1.11",
         "phpstan/phpstan-deprecation-rules": "^1",
         "phpstan/phpstan-nette": "^1",
         "phpstan/phpstan-strict-rules": "^1",
