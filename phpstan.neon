@@ -5,10 +5,6 @@ includes:
 
 parameters:
     inferPrivatePropertyTypeFromConstructor: true
-    ignoreErrors:
-        -
-            identifier:
-                missingType.generics
 
 rules:
     - Inspire\PHPStan\Rules\DisableUnaryNegationOperatorRule
