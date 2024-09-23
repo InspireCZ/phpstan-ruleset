@@ -49,6 +49,7 @@ services:
         type: PHPStan\Rules\Cast\UselessCastRule
         arguments:
             treatPhpDocTypesAsCertain: %treatPhpDocTypesAsCertain%
+            treatPhpDocTypesAsCertainTip: %treatPhpDocTypesAsCertain%
         tags:
             - phpstan.rules.rule
     -
