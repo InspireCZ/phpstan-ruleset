@@ -9,11 +9,11 @@
         "ruleset"
     ],
     "require": {
-        "phpstan/phpstan": "^1.11",
-        "phpstan/phpstan-deprecation-rules": "^1",
-        "phpstan/phpstan-nette": "^1",
-        "phpstan/phpstan-strict-rules": "^1.6.1",
-        "phpstan/phpstan-dibi": "^1"
+        "phpstan/phpstan": "^2",
+        "phpstan/phpstan-deprecation-rules": "^2",
+        "phpstan/phpstan-nette": "^2",
+        "phpstan/phpstan-strict-rules": "^2",
+        "phpstan/phpstan-dibi": "^2"
     },
     "authors": [
         {
