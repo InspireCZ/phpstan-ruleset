@@ -6,6 +6,11 @@ includes:
 parameters:
     inferPrivatePropertyTypeFromConstructor: true
 
+    ignoreErrors:
+        -
+            identifier: phpDoc.parseError
+            path: *Entity.php
+
 rules:
     - Inspire\PHPStan\Rules\DisableUnaryNegationOperatorRule
     - PHPStan\Rules\BooleansInConditions\BooleanInBooleanNotRule
@@ -29,22 +34,15 @@ rules:
     - PHPStan\Rules\VariableVariables\VariableStaticMethodCallRule
     - PHPStan\Rules\VariableVariables\VariableStaticPropertyFetchRule
     - PHPStan\Rules\VariableVariables\VariableVariablesRule
+    #- PHPStan\Rules\VariableVariables\VariablePropertyFetchRule
 
 services:
     -
-        type: PHPStan\Rules\Functions\MissingFunctionParameterTypehintRule
-        arguments:
-            paramOut: false
-    -
         type: PHPStan\Rules\BooleansInConditions\BooleanRuleHelper
+
     -
-        type: PHPStan\Rules\BooleansInConditions\BooleanInBooleanOrRule
-        arguments:
-            bleedingEdge: %featureToggles.bleedingEdge%
-    -
-        type: PHPStan\Rules\BooleansInConditions\BooleanInBooleanAndRule
-        arguments:
-            bleedingEdge: %featureToggles.bleedingEdge%
+        type: PHPStan\Rules\Operators\OperatorRuleHelper
+
     -
         type: PHPStan\Rules\Cast\UselessCastRule
         arguments:
@@ -53,34 +51,8 @@ services:
         tags:
             - phpstan.rules.rule
     -
-        type: PHPStan\Rules\Operators\OperatorRuleHelper
-    -
         type: PHPStan\Rules\VariableVariables\VariablePropertyFetchRule
         arguments:
             universalObjectCratesClasses: %universalObjectCratesClasses%
         tags:
             - phpstan.rules.rule
-    -
-        type: PHPStan\Rules\Operators\OperandsInArithmeticAdditionRule
-        arguments:
-            bleedingEdge: %featureToggles.bleedingEdge%
-    -
-        type: PHPStan\Rules\Operators\OperandsInArithmeticDivisionRule
-        arguments:
-            bleedingEdge: %featureToggles.bleedingEdge%
-    -
-        type: PHPStan\Rules\Operators\OperandsInArithmeticExponentiationRule
-        arguments:
-            bleedingEdge: %featureToggles.bleedingEdge%
-    -
-        type: PHPStan\Rules\Operators\OperandsInArithmeticModuloRule
-        arguments:
-            bleedingEdge: %featureToggles.bleedingEdge%
-    -
-        type: PHPStan\Rules\Operators\OperandsInArithmeticMultiplicationRule
-        arguments:
-            bleedingEdge: %featureToggles.bleedingEdge%
-    -
-        type: PHPStan\Rules\Operators\OperandsInArithmeticSubtractionRule
-        arguments:
-            bleedingEdge: %featureToggles.bleedingEdge%
