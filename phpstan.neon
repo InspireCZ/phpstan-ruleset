@@ -2,6 +2,7 @@ includes:
     - ../../phpstan/phpstan-nette/extension.neon
     - ../../phpstan/phpstan-nette/rules.neon
     - ../../phpstan/phpstan-dibi/extension.neon
+    - ../../staabm/phpstan-todo-by/extension.neon
 
 parameters:
     inferPrivatePropertyTypeFromConstructor: true
@@ -34,7 +35,6 @@ rules:
     - PHPStan\Rules\VariableVariables\VariableStaticMethodCallRule
     - PHPStan\Rules\VariableVariables\VariableStaticPropertyFetchRule
     - PHPStan\Rules\VariableVariables\VariableVariablesRule
-    #- PHPStan\Rules\VariableVariables\VariablePropertyFetchRule
 
 services:
     -

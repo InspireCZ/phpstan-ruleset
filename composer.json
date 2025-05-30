@@ -13,7 +13,8 @@
         "phpstan/phpstan-deprecation-rules": "^2",
         "phpstan/phpstan-nette": "^2",
         "phpstan/phpstan-strict-rules": "^2",
-        "phpstan/phpstan-dibi": "^2"
+        "phpstan/phpstan-dibi": "^2",
+        "staabm/phpstan-todo-by" : "^0.2"
     },
     "authors": [
         {
