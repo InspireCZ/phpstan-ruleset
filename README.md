@@ -2,11 +2,11 @@
 
 Set of PHPStan rules used by INSPIRE CZ developers.
 
-## v1
-Branch `v1` is for Webspire 7 projects.
+## v1, v3
+Branches `v1` and `v3`  is for Webspire 7 projects (`v3` is for PHPStan 2.*).
 
-## master
-Branch `master` is for Webspire 8 projects.
+## Where is v2?
+The v2 branch was originally created for Webspire 8–specific projects. Since Webspire 8 is no longer in active development and the branch has gone unmaintained, it has been deleted.
 
 ## Rules
 
