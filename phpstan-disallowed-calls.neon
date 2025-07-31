@@ -1,0 +1,22 @@
+parameters:
+    disallowedFunctionCalls:
+        -
+            function: 'trim()'
+            message: 'use \\Nette\\Utils\\Strings::trim() instead.'
+        -
+            function: 'preg_match()'
+            message: 'use \\Nette\\Utils\\Strings::match() instead.'
+        -
+            function: 'preg_match_all()'
+            message: 'use \\Nette\\Utils\\Strings::matchAll() instead.'
+        -
+            function: 'preg_replace()'
+            message: 'use \\Nette\\Utils\\Strings::replace() instead.'
+
+    disallowedStaticCalls:
+        -
+            function: 'Nette\Utils\Strings::startsWith()'
+            message: 'use the native \\str_starts_with() instead.'
+        -
+            method: 'Nette\Utils\Strings::endsWith()'
+            message: 'use the native \\str_ends_with() instead.'
