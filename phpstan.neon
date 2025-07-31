@@ -3,6 +3,8 @@ includes:
     - ../../phpstan/phpstan-nette/rules.neon
     - ../../phpstan/phpstan-dibi/extension.neon
     - ../../staabm/phpstan-todo-by/extension.neon
+    - ../../spaze/phpstan-disallowed-calls/extension.neon
+    - phpstan-disallowed-calls.neon
 
 parameters:
     inferPrivatePropertyTypeFromConstructor: true
