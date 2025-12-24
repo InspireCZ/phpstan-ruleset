@@ -11,7 +11,7 @@ The v2 branch was originally created for Webspire 8–specific projects. Since W
 ## Rules
 
 ### DisableUnaryNegationOperatorRule
-This rules prevents developers from using unary negation operator.
+This rules prevents developers from using unary negation operator. Rule error identifier `unaryNegation.nowAllowed`.
 
 ```php
 ❌ if (!$var) ...

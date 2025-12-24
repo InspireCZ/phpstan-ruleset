@@ -23,7 +23,7 @@ final class DisableUnaryNegationOperatorRule implements Rule
     public function processNode(Node $node, Scope $scope): array
     {
         return [
-            RuleErrorBuilder::message('Using unary negation operator "!" is not allowed.')->build(),
+            RuleErrorBuilder::message('Using unary negation operator "!" is not allowed.')->identifier('unaryNegation.notAllowed')->build(),
         ];
     }
 }
