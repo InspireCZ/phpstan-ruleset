@@ -1,58 +1,8 @@
 includes:
-    - ../../phpstan/phpstan-nette/extension.neon
-    - ../../phpstan/phpstan-nette/rules.neon
-    - ../../phpstan/phpstan-dibi/extension.neon
-    - ../../staabm/phpstan-todo-by/extension.neon
+    - phpstan-base.neon
 
 parameters:
-    inferPrivatePropertyTypeFromConstructor: true
-
     ignoreErrors:
         -
             identifier: phpDoc.parseError
             path: *Entity.php
-
-rules:
-    - Inspire\PHPStan\Rules\DisableUnaryNegationOperatorRule
-    - PHPStan\Rules\BooleansInConditions\BooleanInBooleanNotRule
-    - PHPStan\Rules\BooleansInConditions\BooleanInElseIfConditionRule
-    - PHPStan\Rules\BooleansInConditions\BooleanInIfConditionRule
-    - PHPStan\Rules\BooleansInConditions\BooleanInTernaryOperatorRule
-    - PHPStan\Rules\Classes\RequireParentConstructCallRule
-    - PHPStan\Rules\DisallowedConstructs\DisallowedEmptyRule
-    - PHPStan\Rules\DisallowedConstructs\DisallowedImplicitArrayCreationRule
-    - PHPStan\Rules\DisallowedConstructs\DisallowedShortTernaryRule
-    - PHPStan\Rules\ForeachLoop\OverwriteVariablesWithForeachRule
-    - PHPStan\Rules\Methods\WrongCaseOfInheritedMethodRule
-    - PHPStan\Rules\Operators\OperandInArithmeticPostDecrementRule
-    - PHPStan\Rules\Operators\OperandInArithmeticPostIncrementRule
-    - PHPStan\Rules\Operators\OperandInArithmeticPreDecrementRule
-    - PHPStan\Rules\Operators\OperandInArithmeticPreIncrementRule
-    - PHPStan\Rules\Properties\MissingPropertyTypehintRule
-    - PHPStan\Rules\StrictCalls\DynamicCallOnStaticMethodsRule
-    - PHPStan\Rules\StrictCalls\StrictFunctionCallsRule
-    - PHPStan\Rules\SwitchConditions\MatchingTypeInSwitchCaseConditionRule
-    - PHPStan\Rules\VariableVariables\VariableStaticMethodCallRule
-    - PHPStan\Rules\VariableVariables\VariableStaticPropertyFetchRule
-    - PHPStan\Rules\VariableVariables\VariableVariablesRule
-
-services:
-    -
-        type: PHPStan\Rules\BooleansInConditions\BooleanRuleHelper
-
-    -
-        type: PHPStan\Rules\Operators\OperatorRuleHelper
-
-    -
-        type: PHPStan\Rules\Cast\UselessCastRule
-        arguments:
-            treatPhpDocTypesAsCertain: %treatPhpDocTypesAsCertain%
-            treatPhpDocTypesAsCertainTip: %treatPhpDocTypesAsCertain%
-        tags:
-            - phpstan.rules.rule
-    -
-        type: PHPStan\Rules\VariableVariables\VariablePropertyFetchRule
-        arguments:
-            universalObjectCratesClasses: %universalObjectCratesClasses%
-        tags:
-            - phpstan.rules.rule
