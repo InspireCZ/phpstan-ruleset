@@ -6,3 +6,4 @@ parameters:
         -
             identifier: phpDoc.parseError
             path: *Entity.php
+            reportUnmatched: false
