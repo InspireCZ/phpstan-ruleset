@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.2.0] - 2026-09-14
+### Added
+- `PresenterMethodVisibilityRule` reporting `action*`, `render*`, `handle*` and `createComponent*` presenter methods whose visibility Nette rejects while compiling the DI container
+
 ## [3.1.2] - 2026-08-17
 ### Fixed
 - do not report the `phpDoc.parseError` ignore as unmatched in packages without `*Entity.php`

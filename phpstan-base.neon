@@ -9,6 +9,7 @@ parameters:
 
 rules:
     - Inspire\PHPStan\Rules\DisableUnaryNegationOperatorRule
+    - Inspire\PHPStan\Rules\PresenterMethodVisibilityRule
     - PHPStan\Rules\BooleansInConditions\BooleanInBooleanNotRule
     - PHPStan\Rules\BooleansInConditions\BooleanInElseIfConditionRule
     - PHPStan\Rules\BooleansInConditions\BooleanInIfConditionRule
