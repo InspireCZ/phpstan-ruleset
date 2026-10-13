@@ -34,6 +34,11 @@ rules:
 
 services:
     -
+        type: Inspire\PHPStan\Type\Nette\FormValuesArrayReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+
+    -
         type: PHPStan\Rules\BooleansInConditions\BooleanRuleHelper
 
     -
