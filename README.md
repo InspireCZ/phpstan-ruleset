@@ -45,3 +45,14 @@ takes the prefixes literally, so a presenter overriding `formatActionMethod()` a
 out of its reach.
 
 Do not put a violation in the baseline. A baselined violation still breaks the deployment.
+
+## Type extensions
+
+### FormValuesArrayReturnTypeExtension
+`$form->getValues('array')` and `getUntrustedValues('array')` are `array<mixed>`. nette/forms 3.3
+describes the return type by a condition that tests a class name before the string `'array'`, and
+PHPStan cannot rule out that `'array'` names a class. It answered `array|array<mixed>` with an object
+in it, so reading a key of the values failed with `offsetAccess.nonOffsetAccessible`. The other calls
+of these methods keep the type nette/forms gives them.
+
+The extension goes once nette/forms tests `'array'` first.

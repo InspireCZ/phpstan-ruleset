@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.2.1] - 2026-10-13
+### Fixed
+- `getValues('array')` and `getUntrustedValues('array')` of a Nette form are `array<mixed>`; with nette/forms 3.3 PHPStan typed them `array|array<mixed>` with an object in it, and reading a key failed with `offsetAccess.nonOffsetAccessible`
+
 ## [3.2.0] - 2026-09-14
 ### Added
 - `PresenterMethodVisibilityRule` reporting `action*`, `render*`, `handle*` and `createComponent*` presenter methods whose visibility Nette rejects while compiling the DI container
